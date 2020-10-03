@@ -1,4 +1,4 @@
-# storybook_nuxt
+# AtomicDesign v-model Example
 
 ## Build Setup
 
@@ -15,12 +15,7 @@ $ yarn start
 
 # generate static project
 $ yarn generate
-```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-
-## Publish storybook to github pages
-```bash
-# build and deploy
-$ yarn storybook:deploy
+# serve storybook with hot reload at localhost:6006
+$ yarn storybook
 ```
