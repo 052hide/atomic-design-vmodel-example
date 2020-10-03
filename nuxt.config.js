@@ -57,6 +57,7 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    hardSource: true,
     babel: {
       presets({ isServer }) { // eslint-disable-line
         return [

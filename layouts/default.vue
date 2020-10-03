@@ -1,6 +1,9 @@
 <template>
   <div class="layout">
-    <Nuxt />
+    <nuxt-link to="/">メニューに戻る</nuxt-link>
+    <div class="layout__main">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
@@ -15,5 +18,11 @@ export default class DefaultLayout extends mixins(AppMixin) {}
 <style lang="scss" scoped>
 html {
   @apply font-sans;
+}
+
+.layout {
+  &__main {
+    @apply mx-auto my-10 w-full max-w-screen-lg;
+  }
 }
 </style>

@@ -92,5 +92,3 @@ sw.*
 # Storybook
 .nuxt-storybook
 storybook-static
-
-components/**

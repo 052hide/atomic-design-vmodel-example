@@ -4,8 +4,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "clear-hard-source-cache": "rm -rf node_modules/.cache/hard-source/",
     "dev": "cross-env HOST=0.0.0.0 PORT=3000 nuxt-ts",
     "build": "nuxt-ts build",
+    "build:nocache": "yarn run -s clear-hard-source-cache && yarn run -s build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "lint:js": "eslint --ext .ts,.js,.vue --ignore-path .eslintignore .",
