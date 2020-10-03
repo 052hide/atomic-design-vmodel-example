@@ -16,7 +16,7 @@ import AppMixin from '~/mixins/AppMixin'
 @Component
 export default class AtomFormInputDate extends mixins(AppMixin) {
   @Prop({ default: ComponentConst.defaultValue.formInputDateValue })
-  value!: any
+  value!: string
 
   @Prop({ default: ComponentConst.defaultValue.formInputWidth })
   width!: ComponentType.InputWidth
