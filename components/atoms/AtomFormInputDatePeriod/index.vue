@@ -40,8 +40,8 @@ export default class AtomFormInputDatePeriod extends mixins(AppMixin) {
 
   set inputValueStart(value: string) {
     this.$emit('input', {
+      ...this.value,
       start: value,
-      end: this.value.end,
     })
   }
 
@@ -51,7 +51,7 @@ export default class AtomFormInputDatePeriod extends mixins(AppMixin) {
 
   set inputValueEnd(value: string) {
     this.$emit('input', {
-      start: this.value.start,
+      ...this.value,
       end: value,
     })
   }
