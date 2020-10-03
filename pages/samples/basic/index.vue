@@ -59,7 +59,7 @@ export default class PageSamplesBasic extends mixins(AppMixin) {
 
   htmlStrings: { [key: string]: string } = {
     text: `<input v-model="form.text" type="text" />
-<p>form.string: {{ form.text }}</p>`,
+<p>form.text: {{ form.text }}</p>`,
     select: `<select v-model="form.select" :value="true">
   <option :value="true">Boolean</option>
   <option :value="2">Number</option>
