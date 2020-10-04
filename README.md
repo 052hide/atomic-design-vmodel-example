@@ -6,6 +6,9 @@
 # install dependencies
 $ yarn install
 
+# clear hard source cache
+$ yarn clear-hard-source-cache
+
 # serve with hot reload at localhost:3000
 $ yarn dev
 
@@ -15,7 +18,4 @@ $ yarn start
 
 # generate static project
 $ yarn generate
-
-# serve storybook with hot reload at localhost:6006
-$ yarn storybook
 ```
