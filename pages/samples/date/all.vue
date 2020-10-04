@@ -34,7 +34,9 @@
         </li>
       </ul>
     </template-table>
-    <nuxt-link to="/samples/date" class="underline">→動くやつ</nuxt-link>
+    <div class="mt-12">
+      <nuxt-link to="/samples/date" class="underline">→動くやつ</nuxt-link>
+    </div>
   </div>
 </template>
 

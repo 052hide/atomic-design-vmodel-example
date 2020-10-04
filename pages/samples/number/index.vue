@@ -23,6 +23,17 @@
         </li>
       </ul>
     </template-table>
+    <template-code class="mt-12">
+      <section>
+        <h3>modifier: なし</h3>
+        <pre><code class="language-html">{{ htmlStrings.vModel }}</code></pre>
+        <p>valueがstringとして扱われる</p>
+      </section>
+      <section>
+        <h3>modifier: number</h3>
+        <pre><code class="language-html">{{ htmlStrings.vModelNumber }}</code></pre>
+      </section>
+    </template-code>
   </div>
 </template>
 
@@ -30,15 +41,22 @@
 import { Component, mixins } from 'nuxt-property-decorator'
 import AppMixin from '~/mixins/AppMixin'
 import TemplateTable from '~/components/templates/TemplateTable/index.vue'
+import TemplateCode from '~/components/templates/TemplateCode/index.vue'
 
 @Component({
   components: {
     TemplateTable,
+    TemplateCode,
   },
 })
 export default class PageSamplesNumber extends mixins(AppMixin) {
   text: number = 0
   number: number = 0
+
+  htmlStrings: { [key: string]: string } = {
+    vModel: `<input v-model="text" type="number" />`,
+    vModelNumber: `<input v-model.number="number" type="number" />`,
+  }
 }
 </script>
 

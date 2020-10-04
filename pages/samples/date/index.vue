@@ -32,9 +32,43 @@
         </li>
       </ul>
     </template-table>
-    <nuxt-link to="/samples/date/all" class="underline"
-      >→コンポーネントをひとつにまとめたやつ (動かない)</nuxt-link
-    >
+    <template-code class="mt-12">
+      <section>
+        <h3>value: string (YYYY-MM-DD)</h3>
+        <pre><code class="language-html">{{ htmlStrings.string }}</code></pre>
+        <p>詳しくは<code>/components/atoms/AtomFormInputDate</code>参照</p>
+        <p>
+          DayjsなどDate型ではないものを使いたい場合も多い、APIへ渡す値もstringが多いことを考えると、Atomコンポーネントは一番シンプルに書けるstringで作っておくのがよさそう
+        </p>
+      </section>
+      <section>
+        <h3>value: number (unixtime)</h3>
+        <pre><code class="language-html">{{ htmlStrings.number }}</code></pre>
+        <p>
+          詳しくは<code>/components/atoms/AtomFormInputDateNumber</code>参照
+        </p>
+        <p>
+          nullを許可しないといけない
+          (undefinedでは変更がリアクティブにならないからだめ)
+        </p>
+        <p>getでstringに変換、setでnumberに変換してemitする必要がある</p>
+      </section>
+      <section>
+        <p>value: Date</p>
+        <pre><code class="language-html">{{ htmlStrings.date }}</code></pre>
+        <p>詳しくは<code>/components/atoms/AtomFormInputDateDate</code>参照</p>
+        <p>
+          nullを許可しないといけない
+          (undefinedでは変更がリアクティブにならないからだめ)
+        </p>
+        <p>getでstringに変換、setでDateに変換してemitする必要がある</p>
+      </section>
+    </template-code>
+    <div class="mt-12">
+      <nuxt-link to="/samples/date/all" class="underline"
+        >→参考: コンポーネントをひとつにまとめたやつ (動かない)</nuxt-link
+      >
+    </div>
   </div>
 </template>
 
@@ -45,6 +79,7 @@ import AtomFormInputDate from '~/components/atoms/AtomFormInputDate/index.vue'
 import AtomFormInputDateNumber from '~/components/atoms/AtomFormInputDateNumber/index.vue'
 import AtomFormInputDateDate from '~/components/atoms/AtomFormInputDateDate/index.vue'
 import TemplateTable from '~/components/templates/TemplateTable/index.vue'
+import TemplateCode from '~/components/templates/TemplateCode/index.vue'
 
 @Component({
   components: {
@@ -52,12 +87,24 @@ import TemplateTable from '~/components/templates/TemplateTable/index.vue'
     AtomFormInputDateNumber,
     AtomFormInputDateDate,
     TemplateTable,
+    TemplateCode,
   },
 })
 export default class PageSamplesDate extends mixins(AppMixin) {
   text: string = ''
   number: number | null = null
   date: Date | null = null
+
+  htmlStrings: { [key: string]: string } = {
+    string: `get inputValue(): string { return this.value }
+set inputValue(value: string) { this.$emit('input', value) }`,
+    number: `get inputValue(): string { return this.value ? new Date(this.value).toISOString().substr(0, 10) : '' }
+set inputValue(value: string) {
+  this.$emit('input', value ? new Date(\`\${value}T00:00:00Z\`).getTime() : null)
+}`,
+    date: `get inputValue(): string { return this.value?.toISOString().substr(0, 10) || '' }
+set inputValue(value: string) { this.$emit('input', value ? new Date(value) : null) }`,
+  }
 }
 </script>
 
