@@ -19,11 +19,3 @@ jobs:
       run: |
         yarn install
         yarn lint
-    - name: Send notification to Slack
-      uses: 8398a7/action-slack@v2
-      if: always()
-      with:
-        status: ${{ job.status }}
-        text: overwrite text
-      env:
-        SLACK_WEBHOOK_URL: ${{ secrets.COMMON_SLACK_WEBHOOK_URL }}
