@@ -13,8 +13,17 @@
         <p>変更が親コンポーネントに伝わらない</p>
       </section>
       <section>
-        <h3>⭕ computedを使う</h3>
+        <h3>🔺 props.valueをdataにコピーしてemitは別で行う</h3>
         <pre><code>{{ htmlStrings[2] }}</code></pre>
+        <p>問題ないけど無駄なstateの定義では？</p>
+        <p>ただしAtomコンポーネント以外ではかなり使える</p>
+        <nuxt-link to="/samples/component/more"
+          >→Atomコンポーネント以外でのv-modelの使い方</nuxt-link
+        >
+      </section>
+      <section>
+        <h3>⭕ computedを使う</h3>
+        <pre><code>{{ htmlStrings[3] }}</code></pre>
         <p>getでprops.valueをreturn、setでform.valueをemitする</p>
         <p>データソースが必ず親コンポーネントから渡した値になる</p>
         <p>おそらくすべてのform系のdomで同じように書ける</p>
@@ -55,6 +64,14 @@ export default class PageSamplesComponent extends mixins(AppMixin) {
 @Prop({ required: true }) value!: string
 
 inputValue: string = this.value`,
+    `<input v-model="inputValue" type="text" @input="handle" />
+
+@Prop({ required: true }) value!: string
+
+inputValue: string = ''
+
+created() { this.inputValue = this.value }
+handle(value: string) { this.@emit('input', this.inputValue) }`,
     `<input v-model="inputValue" type="text" />
 
 @Prop({ required: true }) value!: string

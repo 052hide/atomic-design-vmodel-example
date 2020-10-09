@@ -7,8 +7,13 @@
         >
       </li>
       <li class="menu__item">
-        <nuxt-link to="/samples/component" class="menu__link"
-          >AtomInputコンポーネントの作り方</nuxt-link
+        <nuxt-link to="/samples/component/atoms" class="menu__link"
+          >Atomコンポーネントでv-modelの使い方</nuxt-link
+        >
+      </li>
+      <li class="menu__item">
+        <nuxt-link to="/samples/component/more" class="menu__link"
+          >Atom以外のコンポーネントでv-modelの使い方</nuxt-link
         >
       </li>
       <li class="menu__item">
