@@ -45,11 +45,6 @@ stateValue: string = ''
 
 created() { this.stateValue = this.value }
 handle(value: string) { this.@emit('input', this.stateValue) }`,
-    `<input :value="value" type="text" @input="handler" />
-
-@Prop({ required: true }) value!: string
-
-handler(e: InputEvent) { this.$emit('input', (e.target as HTMLInputElement).value) }`,
   ]
 }
 </script>
