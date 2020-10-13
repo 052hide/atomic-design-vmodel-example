@@ -27,7 +27,7 @@
     "core-js": "^3.6.5",
     "dayjs": "^1.9.1",
     "nuxt": "^2.14.6",
-    "vee-validate": "^3.4.0",
+    "vee-validate": "^3.4.1",
     "vue-select": "^3.10.8"
   },
   "devDependencies": {
