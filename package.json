@@ -14,7 +14,7 @@
     "lint": "yarn lint:js",
     "lint:fix": "yarn lint:js --ext .ts,.js,.vue --ignore-path .eslintignore . --fix",
     "test": "jest",
-    "deploy": "push-dir --dir=dist --branch=feature/add_deploy/052hide --cleanup",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "storybook": "yarn nuxt-ts storybook",
     "build-storybook": "nuxt-ts storybook build",
     "deploy-storybook": "storybook-to-ghpages -e storybook-static",
