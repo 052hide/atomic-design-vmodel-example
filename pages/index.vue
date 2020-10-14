@@ -2,33 +2,48 @@
   <div class="page">
     <ul class="menu">
       <li class="menu__item">
-        <nuxt-link to="/samples/basic" class="menu__link"
+        <nuxt-link to="/samples/v-model/basic" class="menu__link"
           >v-model基礎</nuxt-link
         >
       </li>
       <li class="menu__item">
-        <nuxt-link to="/samples/component/atoms" class="menu__link"
+        <nuxt-link to="/samples/v-model/component/atoms" class="menu__link"
           >Atomコンポーネントでv-modelの使い方</nuxt-link
         >
       </li>
       <li class="menu__item">
-        <nuxt-link to="/samples/component/more" class="menu__link"
+        <nuxt-link to="/samples/v-model/component/more" class="menu__link"
           >Atom以外のコンポーネントでv-modelの使い方</nuxt-link
         >
       </li>
       <li class="menu__item">
-        <nuxt-link to="/samples/number" class="menu__link"
+        <nuxt-link to="/samples/v-model/number" class="menu__link"
           >v-modelで数値を扱う</nuxt-link
         >
       </li>
       <li class="menu__item">
-        <nuxt-link to="/samples/date" class="menu__link"
+        <nuxt-link to="/samples/v-model/date" class="menu__link"
           >v-modelで日付を扱う</nuxt-link
         >
       </li>
       <li class="menu__item">
-        <nuxt-link to="/samples/object" class="menu__link"
-          >v-modelで複数の値をを扱う</nuxt-link
+        <nuxt-link to="/samples/v-model/object" class="menu__link"
+          >v-modelで複数のデータを扱う</nuxt-link
+        >
+      </li>
+      <li class="menu__item">
+        <nuxt-link to="/samples/prop-sync" class="menu__link"
+          >PropSync</nuxt-link
+        >
+      </li>
+      <li class="menu__item">
+        <nuxt-link to="/samples/prop-sync/object" class="menu__link"
+          >PropSync (objectを扱う)</nuxt-link
+        >
+      </li>
+      <li class="menu__item">
+        <nuxt-link to="/samples/prop-sync/multi" class="menu__link"
+          >PropSync (複数のデータを扱う)</nuxt-link
         >
       </li>
       <li class="menu__item">

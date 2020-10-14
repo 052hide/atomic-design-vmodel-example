@@ -17,7 +17,7 @@
         <pre><code>{{ htmlStrings[2] }}</code></pre>
         <p>問題ないけど無駄なstateの定義では？</p>
         <p>ただしAtomコンポーネント以外ではかなり使える</p>
-        <nuxt-link to="/samples/component/more"
+        <nuxt-link to="/samples/v-model/component/more"
           >→Atomコンポーネント以外でのv-modelの使い方</nuxt-link
         >
       </section>
@@ -54,7 +54,7 @@ import TemplateCode from '~/components/templates/TemplateCode/index.vue'
     TemplateCode,
   },
 })
-export default class PageSamplesComponent extends mixins(AppMixin) {
+export default class PageSamplesVModelComponentAtoms extends mixins(AppMixin) {
   htmlStrings: string[] = [
     `<input v-model="value" type="text" />
 

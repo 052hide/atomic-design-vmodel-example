@@ -49,7 +49,7 @@ import TemplateCode from '~/components/templates/TemplateCode/index.vue'
     TemplateCode,
   },
 })
-export default class PageSamplesNumber extends mixins(AppMixin) {
+export default class PageSamplesVModelNumber extends mixins(AppMixin) {
   text: number = 0
   number: number = 0
 

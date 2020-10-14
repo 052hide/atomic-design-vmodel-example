@@ -26,6 +26,13 @@
         <pre><code class="language-html">{{ htmlStrings.parent }}</code></pre>
         <p>v-modelで子のvalue型で渡すだけ</p>
       </section>
+      <section>
+        <p>
+          <nuxt-link to="/samples/prop-sync/multi"
+            >→PropSyncを使ったほうがよさそう</nuxt-link
+          >
+        </p>
+      </section>
     </template-code>
   </div>
 </template>
@@ -44,7 +51,7 @@ import TemplateCode from '~/components/templates/TemplateCode/index.vue'
     TemplateCode,
   },
 })
-export default class PageSamplesObject extends mixins(AppMixin) {
+export default class PageSamplesVModelObject extends mixins(AppMixin) {
   datePeriod = {
     start: '',
     end: '',

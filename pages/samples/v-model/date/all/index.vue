@@ -35,7 +35,9 @@
       </ul>
     </template-table>
     <div class="mt-12">
-      <nuxt-link to="/samples/date" class="underline">→動くやつ</nuxt-link>
+      <nuxt-link to="/samples/v-model/date" class="underline"
+        >→動くやつ</nuxt-link
+      >
     </div>
   </div>
 </template>
@@ -52,7 +54,7 @@ import TemplateTable from '~/components/templates/TemplateTable/index.vue'
     TemplateTable,
   },
 })
-export default class PageSamplesDateAll extends mixins(AppMixin) {
+export default class PageSamplesVModelDateAll extends mixins(AppMixin) {
   allText: string = ''
   allNumber: number | null = null
   allDate: Date | null = null
