@@ -3,7 +3,6 @@ on:
   push:
     branches:
     - master
-    - feature/add_deploy/052hide
 jobs:
   build:
     runs-on: ubuntu-latest
