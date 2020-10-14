@@ -92,3 +92,6 @@ sw.*
 # Storybook
 .nuxt-storybook
 storybook-static
+
+# Cypress
+test/e2e/integration/*.spec.js
