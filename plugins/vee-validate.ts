@@ -27,6 +27,7 @@ const messageJa = {
 }
 
 for (const [rule, validation] of Object.entries(rules)) {
+  // @ts-ignore
   extend(rule, {
     ...validation,
   })
