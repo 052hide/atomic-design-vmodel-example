@@ -65,7 +65,7 @@
       </section>
     </template-code>
     <div class="mt-12">
-      <nuxt-link to="/samples/date/all" class="underline"
+      <nuxt-link to="/samples/v-model/date/all" class="underline"
         >→参考: コンポーネントをひとつにまとめたやつ (動かない)</nuxt-link
       >
     </div>
@@ -90,7 +90,7 @@ import TemplateCode from '~/components/templates/TemplateCode/index.vue'
     TemplateCode,
   },
 })
-export default class PageSamplesDate extends mixins(AppMixin) {
+export default class PageSamplesVModelDate extends mixins(AppMixin) {
   text: string = ''
   number: number | null = null
   date: Date | null = null

@@ -35,7 +35,7 @@ import TemplateCode from '~/components/templates/TemplateCode/index.vue'
     TemplateCode,
   },
 })
-export default class PageSamplesComponent extends mixins(AppMixin) {
+export default class PageSamplesVModelComponentMore extends mixins(AppMixin) {
   htmlStrings: string[] = [
     `<input v-model="inputCondition" type="text" @input="handle" />
 

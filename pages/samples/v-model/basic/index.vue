@@ -49,7 +49,7 @@ import TemplateCode from '~/components/templates/TemplateCode/index.vue'
     TemplateCode,
   },
 })
-export default class PageSamplesBasic extends mixins(AppMixin) {
+export default class PageSamplesVModelBase extends mixins(AppMixin) {
   form = {
     text: '',
     select: null,
