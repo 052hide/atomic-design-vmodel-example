@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <nuxt-link to="/">メニューに戻る</nuxt-link>
+    <nuxt-link v-if="$route.path !== '/'" to="/">メニューに戻る</nuxt-link>
     <div class="layout__main">
       <Nuxt />
     </div>
