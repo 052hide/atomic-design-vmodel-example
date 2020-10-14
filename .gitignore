@@ -92,3 +92,7 @@ sw.*
 # Storybook
 .nuxt-storybook
 storybook-static
+
+# Cypress videos and screenshots
+/test/e2e/screenshots
+/test/e2e/videos
