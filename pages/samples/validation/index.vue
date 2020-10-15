@@ -64,7 +64,7 @@ export default class PageSamplesValidation extends mixins(AppMixin) {
     :size="size"
     :width="width"
     :rounded="rounded"
-    is-disabled="isDisabled"
+    :is-disabled="isDisabled"
   />
   <span class="validation-form-item__error">{{ errors[0] }}</span>
 </ValidationProvider>
