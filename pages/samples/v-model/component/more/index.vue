@@ -37,14 +37,14 @@ import TemplateCode from '~/components/templates/TemplateCode/index.vue'
 })
 export default class PageSamplesVModelComponentMore extends mixins(AppMixin) {
   htmlStrings: string[] = [
-    `<input v-model="inputCondition" type="text" @input="handle" />
+    `<input v-model="stateCondition" type="text" @input="submit" />
 
-@Prop({ required: true }) value!: string
+@Prop({ default: () => { return { a: '', b: '' } } }) propCondition!: { a: string; b: string }
 
-stateValue: string = ''
+stateCondition = { a: '', b: '' }
 
-created() { this.stateValue = this.value }
-handle(value: string) { this.@emit('input', this.stateValue) }`,
+created() { this.stateCondition = this.propCondition }
+submit() { this.@emit('input', this.stateCondition) }`,
   ]
 }
 </script>

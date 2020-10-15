@@ -34,7 +34,7 @@
       </section>
       <section>
         <h3>おまけ: v-modelを使わない</h3>
-        <pre><code>{{ htmlStrings[3] }}</code></pre>
+        <pre><code>{{ htmlStrings[4] }}</code></pre>
         <p>valueと@inputや@changeなどを定義することになる</p>
         <p>
           コードは意外とシンプルだったりするけどformの種類によってイベントやDOMの種類が異なるので悩むことになる
