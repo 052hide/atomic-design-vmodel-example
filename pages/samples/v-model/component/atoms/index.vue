@@ -71,7 +71,7 @@ inputValue: string = this.value`,
 inputValue: string = ''
 
 created() { this.inputValue = this.value }
-handle(value: string) { this.@emit('input', this.inputValue) }`,
+handle() { this.@emit('input', this.inputValue) }`,
     `<input v-model="inputValue" type="text" />
 
 @Prop({ required: true }) value!: string
