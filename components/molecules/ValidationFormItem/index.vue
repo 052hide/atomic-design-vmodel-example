@@ -17,13 +17,8 @@ import { Component, Prop, mixins } from 'nuxt-property-decorator'
 import { ComponentType } from '~/types'
 import { ComponentConst } from '~/consts'
 import AppMixin from '~/mixins/AppMixin'
-import AtomFormInputText from '~/components/atoms/AtomFormInputText/index.vue'
 
-@Component({
-  components: {
-    AtomFormInputText,
-  },
-})
+@Component
 export default class ValidationFormItem extends mixins(AppMixin) {
   @Prop({ required: true })
   name!: string
