@@ -42,7 +42,7 @@
     "@nuxtjs/eslint-module": "^3.0.0",
     "@nuxtjs/storybook": "^3.0.0",
     "@nuxtjs/tailwindcss": "^3.1.0",
-    "@storybook/addon-knobs": "^6.0.26",
+    "@storybook/addon-knobs": "^6.2.7",
     "@storybook/storybook-deployer": "^2.8.7",
     "@types/vue-select": "^2.5.0",
     "@vue/test-utils": "^1.1.0",
