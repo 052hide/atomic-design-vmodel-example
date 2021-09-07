@@ -23,7 +23,7 @@
     "storybook:deploy": "yarn run -s build-storybook && yarn run -s deploy-storybook"
   },
   "dependencies": {
-    "@mdi/font": "^5.7.55",
+    "@mdi/font": "^6.1.95",
     "@nuxt/content": "^1.10.0",
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.2",
